@@ -1,0 +1,46 @@
+.transactionHistory {
+  margin: 0 auto;
+  overflow: hidden;
+  border-collapse: collapse;
+  -webkit-box-shadow: 0px 0px 5px -1px rgba(34, 60, 80, 0.5);
+  -moz-box-shadow: 0px 0px 5px -1px rgba(34, 60, 80, 0.5);
+  box-shadow: 0px 0px 5px -1px rgba(34, 60, 80, 0.5);
+  border-radius: 4px;
+}
+.tdStyles {
+  width: 360px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.tdStyles:not(:last-child) {
+  border-right: 1px solid rgb(200, 192, 192);
+}
+
+.containerTable {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.thead {
+  background-color: #05dede;
+}
+.thStyles {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.thStyles:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+
+.tbody {
+  background-color: #fff;
+}
+
+.tbody tr:nth-child(even) {
+  background-color: rgb(
+    221,
+    221,
+    221
+  ); /* Устанавливаем фон для нечетных строк */
+}

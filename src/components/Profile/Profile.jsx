@@ -1,27 +1,31 @@
+import styles from './Profile.module.css';
+
 export function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <div className={`${styles.containerProfile} container`}>
+      <div className={styles.profile}>
+        <div className={styles.description}>
+          <img src={avatar} alt="User avatar" className={styles.avatar} />
+          <p className={styles.name}>{username}</p>
+          <p className={styles.tag}>@{tag}</p>
+          <p className={styles.location}>{location}</p>
+        </div>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
-        </li>
-      </ul>
+        <ul className={styles.stats}>
+          <li className={styles.statsListIcon}>
+            <span className={styles.label}>Followers</span>
+            <span className={styles.quantity}>{stats.followers}</span>
+          </li>
+          <li className={styles.statsListIcon}>
+            <span className={styles.label}>Views</span>
+            <span className={styles.quantity}>{stats.views}</span>
+          </li>
+          <li className={styles.statsListIcon}>
+            <span className={styles.label}>Likes</span>
+            <span className={styles.quantity}>{stats.likes}</span>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
