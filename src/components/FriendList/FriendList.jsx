@@ -1,5 +1,7 @@
 import styles from './FriendList.module.css';
 
+import { FriendListItem } from './FriendListItem';
+
 export function FriendList({ friends }) {
   return (
     <section className={styles.colorBg}>
@@ -7,24 +9,13 @@ export function FriendList({ friends }) {
         <ul className={`${styles.friendList}`}>
           {friends.map(friend => {
             return (
-              <li className={styles.item} key={friend.id}>
-                {friend.isOnline ? (
-                  <span
-                    className={`${styles.status} ${styles.statusColorGreen}`}
-                  ></span>
-                ) : (
-                  <span
-                    className={`${styles.status} ${styles.statusColorRed}`}
-                  ></span>
-                )}
-                <img
-                  className={styles.avatar}
-                  src={friend.avatar}
-                  alt="User avatar"
-                  width="48"
-                />
-                <p className={styles.name}>{friend.name}</p>
-              </li>
+              <FriendListItem
+                isOnline={friend.isOnline}
+                avatar={friend.avatar}
+                name={friend.name}
+                // id={friend.id}
+                key={friend.id}
+              />
             );
           })}
         </ul>
