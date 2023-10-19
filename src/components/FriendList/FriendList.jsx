@@ -13,7 +13,6 @@ export function FriendList({ friends }) {
                 isOnline={friend.isOnline}
                 avatar={friend.avatar}
                 name={friend.name}
-                // id={friend.id}
                 key={friend.id}
               />
             );
